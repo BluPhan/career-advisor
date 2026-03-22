@@ -15,13 +15,3 @@ const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-```
-
----
-
-## ✅ STEP 3 — Check Your `.gitignore`
-
-Open the **`
-  .gitignore`** file in your project root. Make sure it contains at least these two lines:
-```;
-node_modules.env;
