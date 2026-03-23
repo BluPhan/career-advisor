@@ -39,17 +39,23 @@ function Signup() {
         email,
         password,
       );
-      await setDoc(doc(db, "users", userCredential.user.uid), {
+
+      const uid = userCredential.user.uid;
+
+      await setDoc(doc(db, "users", uid), {
         username: username.trim(),
-        email: email,
+        email: email.trim(),
         createdAt: new Date().toISOString(),
+        skills: [],
       });
+
       navigate("/dashboard");
     } catch (err) {
+      console.error("Signup error:", err);
       if (err.code === "auth/email-already-in-use") {
         setError("An account with this email already exists.");
       } else {
-        setError("Something went wrong. Please try again.");
+        setError(`Something went wrong: ${err.message}`);
       }
     }
     setLoading(false);
