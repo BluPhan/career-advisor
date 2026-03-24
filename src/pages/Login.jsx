@@ -25,7 +25,7 @@ function Login() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white flex">
-      {/* Left panel — hidden on mobile, visible on desktop */}
+      {/* Left panel — hidden on mobile */}
       <div className="hidden md:flex w-1/2 bg-gradient-to-br from-blue-900 via-blue-800 to-gray-900 flex-col justify-between p-12">
         <div>
           <h1 className="text-3xl font-bold text-white mb-2">

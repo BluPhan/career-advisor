@@ -42,23 +42,29 @@ function Dashboard() {
 
   const navigate = useNavigate();
 
+  async function loadUserData(uid) {
+    try {
+      const docRef = doc(db, "users", uid);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        if (data.username) setUsername(data.username);
+        if (data.skills && data.skills.length > 0) {
+          setSelectedSkills(data.skills);
+        }
+      }
+    } catch (err) {
+      console.error("Error loading user data:", err);
+    }
+  }
+
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
-        try {
-          const docRef = doc(db, "users", currentUser.uid);
-          const docSnap = await getDoc(docRef);
-          if (docSnap.exists()) {
-            const data = docSnap.data();
-            if (data.skills) setSelectedSkills(data.skills);
-            if (data.username) setUsername(data.username);
-          }
-        } catch (err) {
-          console.log("No saved data found");
-        }
+        loadUserData(currentUser.uid);
       } else {
-        navigate("/");
+        navigate("/", { replace: true });
       }
     });
     return () => unsubscribe();
@@ -93,20 +99,26 @@ function Dashboard() {
       setCareerMatches(matches);
       setStep("results");
       try {
-        await setDoc(doc(db, "users", user.uid), {
-          skills: selectedSkills,
-          answers: answers,
-          lastUpdated: new Date().toISOString(),
-        });
+        await setDoc(
+          doc(db, "users", user.uid),
+          {
+            username: username,
+            email: user.email,
+            skills: selectedSkills,
+            answers: answers,
+            lastUpdated: new Date().toISOString(),
+          },
+          { merge: true },
+        );
       } catch (err) {
-        console.log("Could not save:", err);
+        console.error("Could not save results:", err);
       }
     }
   }
 
   async function handleLogout() {
     await signOut(auth);
-    navigate("/");
+    navigate("/", { replace: true });
   }
 
   const question = quizQuestions[currentQ];
@@ -157,7 +169,6 @@ function Dashboard() {
         {/* STEP 1 — Skill Selection */}
         {step === "skills" && (
           <div>
-            {/* Welcome banner */}
             <div className="bg-gradient-to-r from-blue-900/40 to-gray-900 border border-blue-800/30 rounded-2xl p-6 mb-8">
               <h2 className="text-2xl font-bold mb-1">
                 Welcome, {username || user?.email || "..."}! 👋
@@ -168,7 +179,6 @@ function Dashboard() {
               </p>
             </div>
 
-            {/* Skill selection card */}
             <div className="bg-gray-900 rounded-2xl p-6">
               <div className="flex items-center justify-between mb-2">
                 <h3 className="text-lg font-semibold">Your Current Skills</h3>
@@ -226,7 +236,6 @@ function Dashboard() {
         {/* STEP 2 — Quiz */}
         {step === "quiz" && question && (
           <div className="max-w-2xl mx-auto">
-            {/* Progress */}
             <div className="mb-8">
               <div className="flex justify-between text-sm text-gray-400 mb-2">
                 <span>
@@ -369,7 +378,7 @@ function Dashboard() {
               {!showCustomInput ? (
                 <button
                   onClick={() => setShowCustomInput(true)}
-                  className="inline-flex items-center gap-2 bg-blue-600/10 hover:bg-blue-600/20 border border-dashed border-blue-500/50 hover:border-blue-400 text-blue-300 hover:text-blue-200 text-sm px-4 py-2 rounded-lg transition-all"
+                  className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
                 >
                   + Enter a career manually
                 </button>
@@ -397,6 +406,7 @@ function Dashboard() {
                     }}
                     placeholder="e.g. Blockchain Developer"
                     className="flex-1 bg-gray-800 text-white rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-blue-500 text-sm border border-gray-700"
+                    autoFocus
                   />
                   <button
                     onClick={() => {
@@ -422,6 +432,13 @@ function Dashboard() {
                 </div>
               )}
             </div>
+
+            <button
+              onClick={() => setStep("skills")}
+              className="mt-4 text-sm text-gray-500 hover:text-white transition-colors"
+            >
+              ← Start over
+            </button>
           </div>
         )}
 
@@ -481,7 +498,6 @@ function Dashboard() {
                         </span>
                       </div>
 
-                      {/* Score bars */}
                       <div className="space-y-2 mb-4">
                         <div>
                           <div className="flex justify-between text-xs text-gray-400 mb-1">
@@ -515,7 +531,6 @@ function Dashboard() {
                         </p>
                       )}
 
-                      {/* Courses */}
                       {gap > 0 && courses.length > 0 && (
                         <div className="border-t border-gray-800 pt-4">
                           <p className="text-xs text-gray-500 font-semibold uppercase tracking-wide mb-3">
@@ -543,6 +558,12 @@ function Dashboard() {
                             ))}
                           </div>
                         </div>
+                      )}
+
+                      {gap > 0 && courses.length === 0 && (
+                        <p className="text-gray-500 text-xs mt-2">
+                          No courses available for this skill yet.
+                        </p>
                       )}
                     </div>
                   ),

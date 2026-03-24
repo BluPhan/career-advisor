@@ -21,12 +21,10 @@ function Signup() {
       setError("Username must be at least 3 characters.");
       return;
     }
-
     if (password !== confirm) {
       setError("Passwords do not match.");
       return;
     }
-
     if (password.length < 6) {
       setError("Password must be at least 6 characters.");
       return;
@@ -39,16 +37,13 @@ function Signup() {
         email,
         password,
       );
-
       const uid = userCredential.user.uid;
-
       await setDoc(doc(db, "users", uid), {
         username: username.trim(),
         email: email.trim(),
         createdAt: new Date().toISOString(),
         skills: [],
       });
-
       navigate("/dashboard", { replace: true });
     } catch (err) {
       console.error("Signup error:", err);
@@ -67,8 +62,7 @@ function Signup() {
         <h1 className="text-3xl font-bold text-blue-400 mb-2 text-center">
           IT Career Advisor
         </h1>
-
-        <p className="text-gray-400 text-center mb-4">Create your account</p>
+        <p className="text-gray-400 text-center mb-8">Create your account</p>
 
         {error && (
           <div className="bg-red-500/20 border border-red-500 text-red-300 rounded-lg p-3 mb-4 text-sm">
