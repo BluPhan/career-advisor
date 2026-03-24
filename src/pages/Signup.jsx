@@ -49,7 +49,7 @@ function Signup() {
         skills: [],
       });
 
-      navigate("/dashboard");
+      navigate("/dashboard", { replace: true });
     } catch (err) {
       console.error("Signup error:", err);
       if (err.code === "auth/email-already-in-use") {
