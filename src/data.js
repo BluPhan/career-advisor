@@ -528,6 +528,198 @@ export const COURSES = {
         "Official documentation with interactive examples and a full handbook.",
     },
   ],
+  Java: [
+    {
+      title: "Java Programming Masterclass",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/java-the-complete-java-developer-course/",
+      description:
+        "Comprehensive Java course covering OOP, data structures and modern Java features.",
+    },
+    {
+      title: "Java Programming for Beginners",
+      platform: "Coursera",
+      url: "https://www.coursera.org/learn/java-programming",
+      description:
+        "Duke University's beginner Java course with hands-on programming assignments.",
+    },
+  ],
+  "C++": [
+    {
+      title: "Beginning C++ Programming",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/beginning-c-plus-plus-programming/",
+      description:
+        "Learn modern C++ from scratch covering OOP, templates and the STL.",
+    },
+    {
+      title: "C++ Tutorial for Beginners",
+      platform: "YouTube",
+      url: "https://www.youtube.com/watch?v=vLnPwxZdW4Y",
+      description:
+        "Free comprehensive YouTube course covering C++ fundamentals and OOP.",
+    },
+  ],
+  "C#": [
+    {
+      title: "C# Fundamentals",
+      platform: "Coursera",
+      url: "https://www.coursera.org/specializations/programming-unity-game-development",
+      description:
+        "Learn C# programming fundamentals through Unity game development projects.",
+    },
+    {
+      title: "Complete C# Masterclass",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/complete-csharp-masterclass/",
+      description:
+        "Comprehensive C# course covering OOP, LINQ, async programming and Unity basics.",
+    },
+  ],
+  Go: [
+    {
+      title: "Go Programming Language Bootcamp",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/go-programming-language/",
+      description:
+        "Complete Go course covering concurrency, interfaces and building web services.",
+    },
+    {
+      title: "Go Official Tour",
+      platform: "Free",
+      url: "https://go.dev/tour/welcome/1",
+      description:
+        "Official interactive Go tutorial covering all core language features in the browser.",
+    },
+  ],
+  Rust: [
+    {
+      title: "Ultimate Rust Crash Course",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/ultimate-rust-crash-course/",
+      description:
+        "Learn Rust fundamentals including ownership, borrowing and systems programming.",
+    },
+    {
+      title: "The Rust Book",
+      platform: "Free",
+      url: "https://doc.rust-lang.org/book/",
+      description:
+        "The official free Rust programming language book — the gold standard reference.",
+    },
+  ],
+  PHP: [
+    {
+      title: "PHP for Beginners",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/php-for-complete-beginners-includes-msql-databases/",
+      description:
+        "Learn PHP from scratch covering OOP, MySQL and building dynamic web apps.",
+    },
+    {
+      title: "PHP Manual",
+      platform: "Free",
+      url: "https://www.php.net/manual/en/getting-started.php",
+      description:
+        "Official PHP documentation covering all language features and functions.",
+    },
+  ],
+  Ruby: [
+    {
+      title: "The Complete Ruby on Rails Developer",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course/",
+      description:
+        "Learn Ruby and Rails building real web apps with authentication and deployment.",
+    },
+    {
+      title: "Ruby Official Docs",
+      platform: "Free",
+      url: "https://www.ruby-lang.org/en/documentation/quickstart/",
+      description:
+        "Official Ruby quickstart guide covering core language syntax and features.",
+    },
+  ],
+  Swift: [
+    {
+      title: "iOS & Swift Bootcamp",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/ios-13-app-development-bootcamp/",
+      description:
+        "Complete iOS development course covering Swift, UIKit and SwiftUI.",
+    },
+    {
+      title: "Swift Official Documentation",
+      platform: "Free",
+      url: "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/",
+      description:
+        "Official Swift language reference covering all language features with examples.",
+    },
+  ],
+  Kotlin: [
+    {
+      title: "Android Development with Kotlin",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/android-kotlin-developer/",
+      description:
+        "Build Android apps with Kotlin covering Jetpack Compose and coroutines.",
+    },
+    {
+      title: "Kotlin Official Docs",
+      platform: "Free",
+      url: "https://kotlinlang.org/docs/getting-started.html",
+      description:
+        "Official Kotlin getting started guide with hands-on exercises and tutorials.",
+    },
+  ],
+  R: [
+    {
+      title: "Data Science with R Specialization",
+      platform: "Coursera",
+      url: "https://www.coursera.org/specializations/data-science-foundations-r",
+      description:
+        "Johns Hopkins data science specialisation using R for analysis and visualisation.",
+    },
+    {
+      title: "R for Data Science (Book)",
+      platform: "Free",
+      url: "https://r4ds.hadley.nz",
+      description:
+        "Free online book by Hadley Wickham covering R for data import, tidy and visualise.",
+    },
+  ],
+  MATLAB: [
+    {
+      title: "MATLAB Onramp",
+      platform: "Free",
+      url: "https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted",
+      description:
+        "Official free MATLAB course by MathWorks covering fundamentals interactively.",
+    },
+    {
+      title: "MATLAB & Simulink for Engineers",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/matlab-simulink-for-engineers/",
+      description:
+        "Learn MATLAB for engineering, data analysis and signal processing.",
+    },
+  ],
+  Scala: [
+    {
+      title: "Functional Programming in Scala",
+      platform: "Coursera",
+      url: "https://www.coursera.org/specializations/scala",
+      description:
+        "Martin Odersky's official Scala specialisation covering functional programming.",
+    },
+    {
+      title: "Scala Official Tour",
+      platform: "Free",
+      url: "https://docs.scala-lang.org/tour/tour-of-scala.html",
+      description:
+        "Official Scala language tour covering syntax, types and key features.",
+    },
+  ],
   React: [
     {
       title: "React - The Complete Guide",
@@ -551,6 +743,54 @@ export const COURSES = {
         "The official interactive React docs with hands-on challenges.",
     },
   ],
+  "Vue.js": [
+    {
+      title: "Vue JS 3 - The Complete Guide",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/vuejs-2-the-complete-guide/",
+      description:
+        "Full Vue 3 course covering Composition API, Vuex, Vue Router and deployment.",
+    },
+    {
+      title: "Vue Official Docs",
+      platform: "Free",
+      url: "https://vuejs.org/guide/introduction.html",
+      description:
+        "Official Vue.js documentation with interactive examples and a full tutorial.",
+    },
+  ],
+  Angular: [
+    {
+      title: "Angular - The Complete Guide",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/the-complete-guide-to-angular-2/",
+      description:
+        "Deep dive into Angular covering components, services, RxJS and deployment.",
+    },
+    {
+      title: "Angular Official Tutorial",
+      platform: "Free",
+      url: "https://angular.io/tutorial",
+      description:
+        "Official Angular tour of heroes tutorial covering core Angular concepts.",
+    },
+  ],
+  "Next.js": [
+    {
+      title: "Next.js Official Tutorial",
+      platform: "Free",
+      url: "https://nextjs.org/learn",
+      description:
+        "Official interactive Next.js tutorial covering routing, data fetching and deployment.",
+    },
+    {
+      title: "Complete Next.js Developer",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/complete-nextjs-developer-zero-to-mastery/",
+      description:
+        "Full Next.js course covering SSR, SSG, API routes and deployment.",
+    },
+  ],
   "Node.js": [
     {
       title: "The Complete Node.js Developer",
@@ -564,6 +804,86 @@ export const COURSES = {
       url: "https://www.youtube.com/watch?v=fBNz5xF-Kx4",
       description:
         "Free 90-minute crash course covering Node fundamentals and Express.",
+    },
+  ],
+  Django: [
+    {
+      title: "Django for Everybody",
+      platform: "Coursera",
+      url: "https://www.coursera.org/specializations/django",
+      description:
+        "University of Michigan's Django specialisation covering web development and deployment.",
+    },
+    {
+      title: "Django Full Course",
+      platform: "YouTube",
+      url: "https://www.youtube.com/watch?v=PtQiiknWUcI",
+      description:
+        "Free comprehensive YouTube course building real Django web applications.",
+    },
+  ],
+  Flask: [
+    {
+      title: "REST APIs with Flask and Python",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/rest-api-flask-and-python/",
+      description:
+        "Build production REST APIs using Flask, SQLAlchemy and Docker.",
+    },
+    {
+      title: "Flask Official Tutorial",
+      platform: "Free",
+      url: "https://flask.palletsprojects.com/en/latest/tutorial/",
+      description:
+        "Official Flask tutorial building a blog app covering routing, templates and databases.",
+    },
+  ],
+  "Spring Boot": [
+    {
+      title: "Spring Boot & Microservices",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/",
+      description:
+        "Build production-ready Java microservices with Spring Boot and Spring Cloud.",
+    },
+    {
+      title: "Spring Official Guides",
+      platform: "Free",
+      url: "https://spring.io/guides",
+      description:
+        "Official Spring getting started guides covering REST APIs, data access and security.",
+    },
+  ],
+  Laravel: [
+    {
+      title: "Laravel From Scratch",
+      platform: "YouTube",
+      url: "https://www.youtube.com/watch?v=MFh0Fd7BsjE",
+      description:
+        "Free comprehensive YouTube course covering Laravel fundamentals and MVC pattern.",
+    },
+    {
+      title: "Laravel Bootcamp",
+      platform: "Free",
+      url: "https://bootcamp.laravel.com",
+      description:
+        "Official Laravel bootcamp building a real app from scratch step by step.",
+    },
+  ],
+  "Express.js": [
+    {
+      title: "Node & Express Bootcamp",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/",
+      description:
+        "Build a complete REST API with Node.js, Express and MongoDB.",
+    },
+    {
+      title: "Express Official Docs",
+      platform: "Free",
+      url: "https://expressjs.com/en/starter/installing.html",
+      description:
+        "Official Express.js getting started guide covering routing and middleware.",
     },
   ],
   SQL: [
@@ -637,36 +957,20 @@ export const COURSES = {
         "Full MongoDB course including aggregation, indexing and Atlas.",
     },
   ],
-  Docker: [
+  Firebase: [
     {
-      title: "Docker & Kubernetes: The Practical Guide",
-      platform: "Udemy",
-      url: "https://www.udemy.com/course/docker-kubernetes-the-practical-guide/",
-      description:
-        "Hands-on Docker and Kubernetes covering containers and orchestration.",
-    },
-    {
-      title: "Docker Official Getting Started",
+      title: "Firebase Web Modular API",
       platform: "Free",
-      url: "https://docs.docker.com/get-started/",
+      url: "https://firebase.google.com/docs/web/modular-upgrade",
       description:
-        "Official Docker tutorial walking through containers step by step.",
-    },
-  ],
-  Kubernetes: [
-    {
-      title: "Kubernetes for Absolute Beginners",
-      platform: "Udemy",
-      url: "https://www.udemy.com/course/learn-kubernetes/",
-      description:
-        "Learn Kubernetes architecture, deployments, services and scaling.",
+        "Official Firebase docs for building web apps with Authentication and Firestore.",
     },
     {
-      title: "Kubernetes Official Docs",
-      platform: "Free",
-      url: "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+      title: "Firebase Full Course",
+      platform: "YouTube",
+      url: "https://www.youtube.com/watch?v=9zdvmgGsww0",
       description:
-        "Official interactive Kubernetes tutorial covering core concepts.",
+        "Free YouTube course covering Firebase Auth, Firestore and Hosting.",
     },
   ],
   AWS: [
@@ -716,6 +1020,38 @@ export const COURSES = {
       description: "Official Google hands-on labs and learning paths for GCP.",
     },
   ],
+  Docker: [
+    {
+      title: "Docker & Kubernetes: The Practical Guide",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/docker-kubernetes-the-practical-guide/",
+      description:
+        "Hands-on Docker and Kubernetes covering containers and orchestration.",
+    },
+    {
+      title: "Docker Official Getting Started",
+      platform: "Free",
+      url: "https://docs.docker.com/get-started/",
+      description:
+        "Official Docker tutorial walking through containers step by step.",
+    },
+  ],
+  Kubernetes: [
+    {
+      title: "Kubernetes for Absolute Beginners",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/learn-kubernetes/",
+      description:
+        "Learn Kubernetes architecture, deployments, services and scaling.",
+    },
+    {
+      title: "Kubernetes Official Docs",
+      platform: "Free",
+      url: "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+      description:
+        "Official interactive Kubernetes tutorial covering core concepts.",
+    },
+  ],
   Linux: [
     {
       title: "Linux Command Line Basics",
@@ -730,6 +1066,38 @@ export const COURSES = {
       url: "https://linuxcommand.org/tlcl.php",
       description:
         "Free online book widely regarded as the best Linux CLI reference.",
+    },
+  ],
+  "Bash Scripting": [
+    {
+      title: "Bash Scripting Full Course",
+      platform: "YouTube",
+      url: "https://www.youtube.com/watch?v=tK9Oc6AEnR4",
+      description:
+        "Free comprehensive YouTube course covering Bash from basics to automation.",
+    },
+    {
+      title: "Linux Shell Scripting",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/linux-shell-scripting-projects/",
+      description:
+        "Learn shell scripting through real-world Linux automation projects.",
+    },
+  ],
+  Networking: [
+    {
+      title: "Computer Networking (Google)",
+      platform: "Coursera",
+      url: "https://www.coursera.org/learn/computer-networking",
+      description:
+        "Google's networking course covering protocols, DNS, TCP/IP and security.",
+    },
+    {
+      title: "CompTIA Network+ Prep",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/comptia-network-cert-n10-008-the-total-course/",
+      description:
+        "Full Network+ certification prep covering infrastructure and troubleshooting.",
     },
   ],
   Cybersecurity: [
@@ -762,22 +1130,6 @@ export const COURSES = {
       url: "https://www.udemy.com/course/certified-ethical-hacker-prep/",
       description:
         "Comprehensive prep for the EC-Council CEH certification exam.",
-    },
-  ],
-  Networking: [
-    {
-      title: "Computer Networking (Google)",
-      platform: "Coursera",
-      url: "https://www.coursera.org/learn/computer-networking",
-      description:
-        "Google's networking course covering protocols, DNS, TCP/IP and security.",
-    },
-    {
-      title: "CompTIA Network+ Prep",
-      platform: "Udemy",
-      url: "https://www.udemy.com/course/comptia-network-cert-n10-008-the-total-course/",
-      description:
-        "Full Network+ certification prep covering infrastructure and troubleshooting.",
     },
   ],
   "Machine Learning": [
@@ -1002,68 +1354,171 @@ export const COURSES = {
         "Full preparation for the Professional Scrum Master certification.",
     },
   ],
-  "Bash Scripting": [
+  "CSS/HTML": [
     {
-      title: "Bash Scripting Full Course",
+      title: "Responsive Web Design",
+      platform: "freeCodeCamp",
+      url: "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
+      description:
+        "Free certification covering HTML and CSS from scratch with hands-on projects.",
+    },
+    {
+      title: "HTML & CSS Full Course",
       platform: "YouTube",
-      url: "https://www.youtube.com/watch?v=tK9Oc6AEnR4",
+      url: "https://www.youtube.com/watch?v=G3e-cpL7ofc",
       description:
-        "Free comprehensive YouTube course covering Bash from basics to automation.",
+        "Free beginner-friendly YouTube course covering modern HTML and CSS.",
     },
     {
-      title: "Linux Shell Scripting",
-      platform: "Udemy",
-      url: "https://www.udemy.com/course/linux-shell-scripting-projects/",
+      title: "The Odin Project",
+      platform: "Free",
+      url: "https://www.theodinproject.com/paths/foundations/courses/foundations",
       description:
-        "Learn shell scripting through real-world Linux automation projects.",
+        "Free full stack curriculum starting with solid HTML and CSS foundations.",
     },
   ],
-  Firebase: [
+  "CI/CD": [
     {
-      title: "Firebase Web Modular API",
-      platform: "Free",
-      url: "https://firebase.google.com/docs/web/modular-upgrade",
-      description:
-        "Official Firebase docs for building web apps with Authentication and Firestore.",
-    },
-    {
-      title: "Firebase Full Course",
+      title: "CI/CD with GitHub Actions",
       platform: "YouTube",
-      url: "https://www.youtube.com/watch?v=9zdvmgGsww0",
+      url: "https://www.youtube.com/watch?v=R8_veQiYBjI",
       description:
-        "Free YouTube course covering Firebase Auth, Firestore and Hosting.",
-    },
-  ],
-  "Next.js": [
-    {
-      title: "Next.js Official Tutorial",
-      platform: "Free",
-      url: "https://nextjs.org/learn",
-      description:
-        "Official interactive Next.js tutorial covering routing, data fetching and deployment.",
+        "Free course covering CI/CD pipelines using GitHub Actions from scratch.",
     },
     {
-      title: "Complete Next.js Developer",
+      title: "DevOps CI/CD on Udemy",
       platform: "Udemy",
-      url: "https://www.udemy.com/course/complete-nextjs-developer-zero-to-mastery/",
+      url: "https://www.udemy.com/course/ci-cd-devops/",
       description:
-        "Full Next.js course covering SSR, SSG, API routes and deployment.",
+        "Hands-on CI/CD course covering Jenkins, GitHub Actions and deployment pipelines.",
     },
   ],
-  Scala: [
+  Figma: [
     {
-      title: "Functional Programming in Scala",
+      title: "Figma UI Design Tutorial",
+      platform: "YouTube",
+      url: "https://www.youtube.com/watch?v=FTFaQWZBqQ8",
+      description:
+        "Free beginner Figma course covering components, auto layout and prototyping.",
+    },
+    {
+      title: "Learn Figma - UI/UX Design",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/learn-figma/",
+      description:
+        "Complete Figma course covering design systems, wireframing and prototypes.",
+    },
+  ],
+  Solidity: [
+    {
+      title: "Solidity & Ethereum Bootcamp",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/blockchain-developer/",
+      description:
+        "Build smart contracts and DApps using Solidity and Web3.js.",
+    },
+    {
+      title: "CryptoZombies",
+      platform: "Free",
+      url: "https://cryptozombies.io",
+      description:
+        "Free interactive Solidity course — learn blockchain coding by building a game.",
+    },
+  ],
+  Cryptography: [
+    {
+      title: "Cryptography I",
       platform: "Coursera",
-      url: "https://www.coursera.org/specializations/scala",
+      url: "https://www.coursera.org/learn/crypto",
       description:
-        "Martin Odersky's official Scala specialisation covering functional programming.",
+        "Stanford's cryptography course covering encryption, MACs and hash functions.",
     },
     {
-      title: "Scala Official Tour",
+      title: "Practical Cryptography for Developers",
       platform: "Free",
-      url: "https://docs.scala-lang.org/tour/tour-of-scala.html",
+      url: "https://cryptobook.nakov.com",
       description:
-        "Official Scala language tour covering syntax, types and key features.",
+        "Free online book covering modern cryptography concepts with code examples.",
+    },
+  ],
+  Unity: [
+    {
+      title: "Unity Beginner to Advanced",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/unitycourse/",
+      description:
+        "Complete Unity course covering 2D and 3D game development from scratch.",
+    },
+    {
+      title: "Unity Official Learn",
+      platform: "Free",
+      url: "https://learn.unity.com",
+      description:
+        "Official Unity learning platform with free guided projects and tutorials.",
+    },
+  ],
+  "Linear Algebra": [
+    {
+      title: "Essence of Linear Algebra",
+      platform: "YouTube",
+      url: "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab",
+      description:
+        "Free YouTube series giving beautiful visual intuition for linear algebra concepts.",
+    },
+    {
+      title: "Linear Algebra for ML",
+      platform: "Coursera",
+      url: "https://www.coursera.org/learn/linear-algebra-machine-learning",
+      description:
+        "Imperial College London's linear algebra course focused on machine learning applications.",
+    },
+  ],
+  Spark: [
+    {
+      title: "Apache Spark with Python",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/spark-and-python-for-big-data-with-pyspark/",
+      description:
+        "Learn PySpark for big data processing, SQL and machine learning pipelines.",
+    },
+    {
+      title: "Spark Official Docs",
+      platform: "Free",
+      url: "https://spark.apache.org/docs/latest/quick-start.html",
+      description:
+        "Official Apache Spark quickstart guide covering core concepts and RDDs.",
+    },
+  ],
+  MQTT: [
+    {
+      title: "MQTT Essentials",
+      platform: "Free",
+      url: "https://www.hivemq.com/mqtt-essentials/",
+      description:
+        "Free comprehensive guide to MQTT protocol for IoT messaging by HiveMQ.",
+    },
+    {
+      title: "IoT with MQTT and Python",
+      platform: "YouTube",
+      url: "https://www.youtube.com/watch?v=kuyCd53AOtg",
+      description:
+        "Free YouTube tutorial connecting IoT devices using MQTT and Python.",
+    },
+  ],
+  Excel: [
+    {
+      title: "Excel for Data Analysis",
+      platform: "Coursera",
+      url: "https://www.coursera.org/learn/excel-data-analysis",
+      description:
+        "Learn Excel for data cleaning, pivot tables, charts and statistical analysis.",
+    },
+    {
+      title: "Microsoft Excel Full Course",
+      platform: "YouTube",
+      url: "https://www.youtube.com/watch?v=Vl0H-qTclOg",
+      description:
+        "Free comprehensive YouTube course covering Excel from beginner to advanced.",
     },
   ],
 };
