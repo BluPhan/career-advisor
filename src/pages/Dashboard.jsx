@@ -57,7 +57,6 @@ function Dashboard() {
       console.error("Error loading user data:", err);
     }
   }
-
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
@@ -154,7 +153,7 @@ function Dashboard() {
           </div>
           <div className="flex items-center gap-4">
             <span className="hidden sm:block text-gray-400 text-sm">
-              {username || user?.email}
+              {username}
             </span>
             <button
               onClick={handleLogout}
@@ -172,8 +171,7 @@ function Dashboard() {
           <div>
             <div className="bg-gradient-to-r from-blue-900/40 to-gray-900 border border-blue-800/30 rounded-2xl p-6 mb-8">
               <h2 className="text-2xl font-bold mb-1">
-                {/* Welcome, {username || user?.email || "!"} 👋 */}
-                Welcome, {username || "!"} 👋
+                Welcome, {username || "..."}! 👋
               </h2>
               <p className="text-gray-400 text-sm">
                 Let's find your ideal IT career. Start by selecting the skills

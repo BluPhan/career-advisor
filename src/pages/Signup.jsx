@@ -77,6 +77,8 @@ function Signup() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             placeholder="e.g. johndoe"
+            required
+            minLength={3}
             className="w-full bg-gray-800 text-white rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
