@@ -38,19 +38,25 @@ function Signup() {
         password,
       );
       const uid = userCredential.user.uid;
-      await setDoc(doc(db, "users", uid), {
-        username: username.trim(),
-        email: email.trim(),
-        createdAt: new Date().toISOString(),
-        skills: [],
-      });
+
+      try {
+        await setDoc(doc(db, "users", uid), {
+          username: username.trim(),
+          email: email.trim(),
+          createdAt: new Date().toISOString(),
+          skills: [],
+        });
+      } catch (firestoreErr) {
+        console.error("Firestore save failed:", firestoreErr);
+      }
+
       navigate("/dashboard", { replace: true });
-    } catch (err) {
-      console.error("Signup error:", err);
-      if (err.code === "auth/email-already-in-use") {
+    } catch (authErr) {
+      console.error("Auth error:", authErr);
+      if (authErr.code === "auth/email-already-in-use") {
         setError("An account with this email already exists.");
       } else {
-        setError(`Something went wrong: ${err.message}`);
+        setError(`Something went wrong: ${authErr.message}`);
       }
     }
     setLoading(false);
