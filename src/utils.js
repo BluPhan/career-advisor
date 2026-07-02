@@ -34,8 +34,8 @@ function buildUserScores(answers, selectedSkills) {
       scores[skill] = answers[question.id];
     } else {
       // User selected this skill but had no question for it
-      // Give them a baseline score of 2 (Beginner)
-      scores[skill] = 2;
+      // Give them a baseline score of 3 (Comfortable)
+      scores[skill] = 3;
     }
   });
 
