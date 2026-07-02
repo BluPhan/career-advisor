@@ -1,6 +1,8 @@
-import { CAREERS, COURSES } from "./data";
+import { CAREERS, COURSES, QUESTIONS } from "./data";
 
-export function getCareerMatches(answers) {
+export function getCareerMatches(answers, selectedSkills) {
+  const userScores = buildUserScores(answers, selectedSkills);
+
   const scored = CAREERS.map((career) => {
     const requiredSkills = Object.keys(career.requiredSkills);
     let totalScore = 0;
@@ -8,7 +10,7 @@ export function getCareerMatches(answers) {
 
     requiredSkills.forEach((skill) => {
       const required = career.requiredSkills[skill];
-      const userScore = findUserScore(answers, skill);
+      const userScore = userScores[skill] ?? 0;
       maxScore += required;
       totalScore += Math.min(userScore, required);
     });
@@ -22,52 +24,30 @@ export function getCareerMatches(answers) {
   return scored.sort((a, b) => b.matchPercent - a.matchPercent);
 }
 
-function findUserScore(answers, skill) {
-  const skillAnswers = Object.entries(answers).filter(([qId]) => {
-    return qId.startsWith("q") && answers[qId] !== undefined;
+function buildUserScores(answers, selectedSkills) {
+  const scores = {};
+
+  // For every skill the user selected, find their quiz answer
+  selectedSkills.forEach((skill) => {
+    const question = QUESTIONS.find((q) => q.skill === skill);
+    if (question && answers[question.id]) {
+      scores[skill] = answers[question.id];
+    } else {
+      // User selected this skill but had no question for it
+      // Give them a baseline score of 3 (Comfortable)
+      scores[skill] = 3;
+    }
   });
 
-  const match = skillAnswers.find(([qId, score]) => {
-    const questionSkill = getSkillForQuestion(qId);
-    return questionSkill === skill;
-  });
-
-  return match ? match[1] : 0;
+  return scores;
 }
 
-function getSkillForQuestion(questionId) {
-  const map = {
-    q1: "Python",
-    q2: "Python",
-    q3: "JavaScript",
-    q4: "JavaScript",
-    q5: "React",
-    q6: "React",
-    q7: "SQL",
-    q8: "SQL",
-    q9: "Machine Learning",
-    q10: "Machine Learning",
-    q11: "Docker",
-    q12: "Docker",
-    q13: "AWS",
-    q14: "AWS",
-    q15: "Cybersecurity",
-    q16: "Cybersecurity",
-    q17: "Networking",
-    q18: "Networking",
-    q19: "Git",
-    q20: "Linux",
-    q21: "Data Analysis",
-    q22: "Data Visualization",
-  };
-  return map[questionId] || null;
-}
-
-export function getSkillGap(career, answers) {
+export function getSkillGap(career, answers, selectedSkills) {
+  const userScores = buildUserScores(answers, selectedSkills || []);
   const gaps = [];
 
   Object.entries(career.requiredSkills).forEach(([skill, required]) => {
-    const userScore = findUserScore(answers, skill);
+    const userScore = userScores[skill] ?? 0;
     const gap = required - userScore;
 
     gaps.push({
