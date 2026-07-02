@@ -95,7 +95,7 @@ function Dashboard() {
     if (currentQ + 1 < quizQuestions.length) {
       setCurrentQ(currentQ + 1);
     } else {
-      const matches = getCareerMatches(answers);
+      const matches = getCareerMatches(answers, selectedSkills);
       setCareerMatches(matches);
       setStep("results");
       try {
@@ -357,7 +357,7 @@ function Dashboard() {
                   <button
                     onClick={() => {
                       setChosenCareer(career);
-                      setSkillGaps(getSkillGap(career, answers));
+                      setSkillGaps(getSkillGap(career, answers, selectedSkills));
                     }}
                     className="text-sm bg-gray-800 hover:bg-blue-600 border border-gray-700 hover:border-blue-500 text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-all"
                   >
@@ -422,7 +422,7 @@ function Dashboard() {
                           description: "Custom career goal",
                         };
                         setChosenCareer(match);
-                        setSkillGaps(getSkillGap(match, answers));
+                        setSkillGaps(getSkillGap(match, answers, selectedSkills));
                       }
                     }}
                     className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition-colors"
