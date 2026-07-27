@@ -299,10 +299,19 @@ function Dashboard() {
               <h2 className="text-2xl font-bold mb-1">
                 Your Career Matches 🎯
               </h2>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-sm mb-3">
                 Based on your skill profile, here are your top IT career
                 matches.
               </p>
+              <div className="bg-blue-600/10 border border-blue-600/30 rounded-xl px-4 py-3">
+                <p className="text-blue-300 text-xs leading-relaxed">
+                  💡 Match scores reflect how your current skills compare to
+                  everything a career requires. A lower score means the career
+                  needs skills you haven't claimed yet — not that you're bad at
+                  what you know. Select more skills and retake the quiz to
+                  improve your matches.
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-col gap-4 mb-6">
